@@ -48,7 +48,7 @@ export default class TotalFinal extends Component {
         <p>Price: U$ { Number(this.state.amountSum).toFixed(2) }</p>
         {this.getTaxAmount()}
         {this.getTipAmount()}
-        <p>TOTAL: U$ {Number(this.state.finalSum).toFixed(2)}</p>      
+        <p className="total">TOTAL: U$ {Number(this.state.finalSum).toFixed(2)}</p>      
       </div>
     )
 
