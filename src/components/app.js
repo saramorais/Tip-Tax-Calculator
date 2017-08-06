@@ -48,7 +48,7 @@ export default class App extends Component {
           <InputTip parentTip={this} />
           <TotalFinal numbers={this.state} />
           <div className="start-over">
-            <button onClick={this.startOver}>Start Over</button>
+            <button onClick={this.startOver}>START OVER</button>
           </div>
         </div>
       </div>
