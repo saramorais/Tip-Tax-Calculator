@@ -16,7 +16,7 @@ export default class InputBar extends Component {
   handleSubmit(event) {
     event.preventDefault();
     if(this.state.amount != "") {
-      this.props.parentBar.getAmount(this.state.amount);
+      this.props.amountInput(this.state.amount);
       this.setState({amount: ""});
     }
   }

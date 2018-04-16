@@ -9,7 +9,7 @@ export default class InputTax extends Component {
 
   handleChange(event) {
     this.setState({tax: event.target.value});
-    this.props.parentTax.getTax(event.target.value);
+    this.props.updateTax(event.target.value);
   }
 
   render() {

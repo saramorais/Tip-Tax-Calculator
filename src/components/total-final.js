@@ -15,6 +15,7 @@ export default class TotalFinal extends Component {
     const tax = nextProps.numbers.tax;
     const tip = nextProps.numbers.tip;
     var sum = 0;
+
     if(arr != undefined && arr.length > 0) {
       for (let i = 0; i < arr.length; i++) {
         sum += parseFloat(arr[i])
@@ -28,26 +29,15 @@ export default class TotalFinal extends Component {
     });
   }
 
-  getTaxAmount(props) {
-    const tax = Number(this.props.numbers.tax * this.state.amountSum).toFixed(2);
-    return (
-      <p>Tax: U$ {tax}</p>
-    )
-  }
-
-  getTipAmount(props) {
-    const tip = Number(this.props.numbers.tip * this.state.amountSum).toFixed(2);
-    return (
-      <p>Tip: U$ {tip}</p>
-    )
-  }
-
   render() {
+    const tax = Number(this.props.numbers.tax * this.state.amountSum).toFixed(2);
+    const tip = Number(this.props.numbers.tip * this.state.amountSum).toFixed(2);
+    
     return (
-      <div>
+      <div className="numbers">
         <p>Price: U$ { Number(this.state.amountSum).toFixed(2) }</p>
-        {this.getTaxAmount()}
-        {this.getTipAmount()}
+        <p>Tax: U$ {tax}</p>
+        <p>Tip: U$ {tip}</p>
         <p className="total">TOTAL: U$ {Number(this.state.finalSum).toFixed(2)}</p>      
       </div>
     )

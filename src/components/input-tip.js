@@ -9,7 +9,7 @@ export default class InputTip extends Component {
 
   handleChange(event) {
     this.setState({tip: event.target.value});
-    this.props.parentTip.getTip(event.target.value);
+    this.props.updateTip(event.target.value);
   }
 
   render() {

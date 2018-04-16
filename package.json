@@ -32,9 +32,8 @@
     "url-loader": "^0.5.9",
     "webpack-dev-server": "^2.6.1"
   },
-  "devDependencies": {
-  },
-    "engines": {
-      "node": "8.1.0"
+  "devDependencies": {},
+  "engines": {
+    "node": "8.1.0"
   }
 }

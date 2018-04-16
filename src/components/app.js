@@ -14,6 +14,9 @@ export default class App extends Component {
       tip: 0,
       tax: 0
     }
+    this.getAmount = this.getAmount.bind(this);
+    this.getTax = this.getTax.bind(this); 
+    this.getTip = this.getTip.bind(this);
     this.startOver = this.startOver.bind(this);
   }
 
@@ -42,10 +45,10 @@ export default class App extends Component {
           <h1>Tax and Tip Calculator</h1>
         </div>
         <div className="calculator">
-          <InputBar parentBar={this} />
+          <InputBar amountInput={this.getAmount} />
           <AmountBox amounts={this.state.amount} />
-          <InputTax parentTax={this} />
-          <InputTip parentTip={this} />
+          <InputTax updateTax={this.getTax} />
+          <InputTip updateTip={this.getTip} />
           <TotalFinal numbers={this.state} />
           <div className="start-over">
             <button onClick={this.startOver}>START OVER</button>

@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class AmountBox extends Component {
+function AmountBox(props) {
 
-  render() {
-    return (
-      <div className="amount-box">
-        <ul>{this.props.amounts.map((amount) =>
-          <li key={Math.random()}>{Number(amount).toFixed(2)} + </li>
-        )}</ul>
-      </div>
-    )
-  }
+  return (
+    <div className="amount-box">
+      <ul>{props.amounts.map((amount) =>
+        <li key={Math.random()}> {Number(amount).toFixed(2)} + </li>)}
+      </ul>
+    </div>
+  )
 }
+
+export default AmountBox;
